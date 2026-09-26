@@ -1,0 +1,303 @@
+2
+80
+0 "Dexamethasone"
+1 "Clarithromycin"
+2 "Picosulfuric acid"
+3 "Repaglinide"
+4 "Glyburide"
+5 "Tolbutamide"
+6 "Chlorpropamide"
+7 "Levofloxacin"
+8 "Glipizide"
+9 "Glimepiride"
+10 "Troglitazone"
+11 "Tolazamide"
+12 "Bupropion"
+13 "Nateglinide"
+14 "Aprepitant"
+15 "Insulin human (inhalation, rapid acting)"
+16 "Empagliflozin"
+17 "Magnesium hydroxide"
+18 "Acetohexamide"
+19 "Saxagliptin"
+20 "Insulin aspart (aspart)"
+21 "Insulin detemir"
+22 "Insulin glulisine"
+23 "Insulin human (isophane)"
+24 "Insulin human (zinc)"
+25 "Insulin glargine"
+26 "Insulin human (regular)"
+27 "Insulin human (zinc extended)"
+28 "Insulin lispro"
+29 "Insulin degludec"
+30 "Canagliflozin"
+31 "Dapagliflozin"
+32 "Ertugliflozin"
+33 "Metformin"
+34 "Exenatide"
+35 "Acetylsalicylic acid"
+36 "Insulin aspart (aspart protamine)"
+37 "Insulin lispro (protamine)"
+38 "Pioglitazone"
+39 "Linagliptin"
+40 "Insulin human"
+41 "Eliglustat"
+42 "Rosiglitazone"
+43 "Sitagliptin"
+44 "Pramlintide"
+45 "Acarbose"
+46 "Alogliptin"
+47 "Liraglutide"
+48 "Miglitol"
+49 "Albiglutide"
+50 "Lixisenatide"
+51 "Magnesium citrate"
+52 "Dulaglutide"
+53 "Semaglutide"
+54 "Lactulose"
+55 "Glycerin"
+56 "Bisacodyl"
+57 "Mineral oil"
+58 "Aluminum hydroxide"
+59 "Polyethylene glycol (3350)"
+60 "Rolapitant"
+61 "Castor oil"
+62 "Nitisinone"
+63 "Magnesium oxide"
+64 "Calcium carbonate"
+65 "Lactitol"
+66 "Ephedrine"
+67 "Glycerol phenylbutyrate"
+68 "Phenolphthalein"
+69 "Magaldrate"
+70 "Naloxegol"
+71 "Amphotericin B"
+72 "Amphotericin B (lipid complex)"
+73 "Naldemedine"
+74 "Amphotericin B (cholesteryl sulfate)"
+75 "Amphotericin B (liposomal)"
+76 "Fluphenazine"
+77 "Ceritinib"
+78 "Chlorthalidone"
+79 "Ciprofloxacin"
+220
+0 45 2
+0 49 2
+0 46 2
+0 33 2
+0 38 2
+0 71 2
+0 72 2
+0 12 3
+0 14 2
+0 35 2
+0 18 2
+0 58 1
+0 74 2
+0 75 2
+0 56 2
+0 64 1
+0 30 2
+0 61 2
+0 77 2
+0 6 2
+0 78 2
+0 79 3
+0 1 2
+0 31 2
+0 52 2
+0 41 2
+0 16 2
+0 66 1
+0 32 2
+0 34 2
+0 76 2
+0 9 2
+0 8 2
+0 4 2
+0 55 2
+0 67 2
+0 40 2
+0 20 2
+0 36 2
+0 29 2
+0 21 2
+0 25 2
+0 22 2
+0 15 2
+0 23 2
+0 28 2
+0 37 2
+0 26 2
+0 24 2
+0 27 2
+0 65 2
+0 54 2
+0 7 3
+0 39 2
+0 47 2
+0 50 2
+0 69 1
+0 51 2
+0 17 2
+0 63 1
+0 48 2
+0 57 2
+0 73 2
+0 70 2
+0 13 2
+0 62 2
+0 68 2
+0 59 2
+0 44 2
+0 3 2
+0 60 2
+0 42 2
+0 19 2
+0 53 2
+0 43 2
+0 11 2
+0 5 2
+0 10 2
+0 2 2
+1 77 3
+1 41 3
+1 70 3
+1 45 2
+1 18 2
+3 79 3
+4 79 3
+4 7 3
+4 35 2
+5 79 3
+6 79 3
+6 7 3
+6 35 2
+7 18 3
+7 12 3
+7 77 3
+7 9 3
+7 8 3
+7 36 3
+7 20 3
+7 29 3
+7 21 3
+7 25 3
+7 22 3
+7 40 3
+7 15 3
+7 23 3
+7 26 3
+7 27 3
+7 24 3
+7 28 3
+7 37 3
+7 45 2
+7 35 2
+8 79 3
+8 35 2
+9 79 3
+9 35 2
+11 79 3
+12 79 3
+12 41 3
+12 66 3
+12 76 3
+13 79 3
+13 18 2
+14 41 3
+14 70 3
+15 79 3
+15 18 2
+15 35 2
+16 18 2
+17 54 1
+17 18 2
+18 79 3
+18 35 2
+18 49 2
+18 46 2
+18 58 2
+18 64 2
+18 30 2
+18 77 2
+18 78 2
+18 31 2
+18 52 2
+18 66 2
+18 32 2
+18 34 2
+18 76 2
+18 20 2
+18 29 2
+18 21 2
+18 25 2
+18 22 2
+18 23 2
+18 26 2
+18 27 2
+18 24 2
+18 28 2
+18 39 2
+18 47 2
+18 50 2
+18 63 2
+18 33 2
+18 48 2
+18 62 2
+18 44 2
+18 19 2
+18 53 2
+18 43 2
+20 79 3
+20 35 2
+21 79 3
+21 35 2
+22 79 3
+22 35 2
+23 79 3
+23 35 2
+24 79 3
+24 35 2
+25 79 3
+25 35 2
+26 79 3
+26 35 2
+27 79 3
+27 35 2
+28 79 3
+28 35 2
+29 79 3
+29 35 2
+33 45 1
+35 58 2
+35 64 2
+35 79 2
+35 36 2
+35 40 2
+35 37 2
+36 79 3
+37 79 3
+40 79 3
+41 70 1
+41 77 3
+41 79 3
+41 60 3
+43 52 1
+44 45 2
+45 49 1
+45 77 2
+45 78 2
+45 79 2
+45 66 2
+45 76 2
+54 58 1
+54 64 1
+54 69 1
+54 63 1
+58 76 1
+60 70 1
+63 76 1
+69 76 1
+70 77 3
+70 79 3
