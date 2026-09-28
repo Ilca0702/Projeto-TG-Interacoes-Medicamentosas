@@ -28,6 +28,7 @@ O programa permite:
 ## Arquivos
 - `main.py`: código-fonte da aplicação.
 - `grafo.txt`: dados utilizados para construção do grafo.
+- `projetoTG_parte2_templateRelatorio.pdf`: relatório final do projeto.
 
 ## Autora
 Ilca Mária Pereira da Luz  
