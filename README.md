@@ -98,7 +98,9 @@ O arquivo `visualizar_grafo.py` utiliza as bibliotecas NetworkX e Matplotlib par
 - `grafo.txt`: conjunto de dados utilizado na aplicação.
 - `main.py`: código da etapa anterior do projeto.
 - `projetoTG_parte2_templateRelatorio.pdf`: relatório da Parte 2.
-
+- `rastreabilidade_projeto_grafos_parte3.xlsx`: planilha de rastreabilidade dos 80 medicamentos e das 220 interações.
+- `projetoTG_parte3_templateRelatório.pdf`: relatório final da Parte 3.
+  
 ## Como executar
 
 **Requisito:** Python 3.
