@@ -1,288 +1,234 @@
 
+# Projeto de Teoria dos Grafos — Interações Medicamentosas
+
+**Universidade Presbiteriana Mackenzie**  
+**Curso:** Ciência da Computação  
+**Disciplina:** Teoria dos Grafos  
+**Professor:** Dr. Ivan Carlos Alcântara de Oliveira  
+**Autora:** Ilca Mária Pereira da Luz  
+**RA:** 10444474
+
 ---
 
 ## 🎥 VÍDEO DE APRESENTAÇÃO DO PROJETO
 
-### ▶️ [CLIQUE AQUI PARA ASSISTIR À APRESENTAÇÃO NO YOUTUBE](https://youtu.be/HcQ0-a2EdBE)
+### ▶️ [CLIQUE AQUI PARA ASSISTIR À APRESENTAÇÃO NO YOUTUBE](https://www.youtube.com/watch?v=HcQO-a2EdBE)
 
-O vídeo apresenta o problema estudado, a coleta e o tratamento dos dados, a modelagem utilizando Teoria dos Grafos, a implementação em Python, a demonstração das funcionalidades, os resultados e os testes realizados.
+O vídeo apresenta o problema estudado, a origem e o tratamento dos dados, a modelagem por meio da Teoria dos Grafos, a implementação em Python, a demonstração das funcionalidades, os resultados obtidos e os testes realizados.
 
 ---
 
+## 1. Descrição do projeto
 
-# Projeto de Teoria dos Grafos - Interações Medicamentosas
+Este projeto foi desenvolvido na disciplina de Teoria dos Grafos com o objetivo de representar e analisar interações entre medicamentos utilizando conceitos e algoritmos estudados ao longo do curso.
 
-## Descrição
+O problema abordado está relacionado ao uso simultâneo de medicamentos, que pode ocasionar interações com diferentes níveis de gravidade.
 
-Projeto desenvolvido na disciplina de Teoria dos Grafos com o objetivo de representar e analisar interações entre medicamentos utilizando conceitos e algoritmos da Teoria dos Grafos.
+Para organizar e analisar essas relações, foi desenvolvido um sistema computacional em Python, utilizando um **grafo não orientado e ponderado**.
 
-Os medicamentos são representados por vértices e as interações medicamentosas por arestas. O modelo utiliza um grafo não orientado e ponderado, no qual os pesos indicam os níveis de gravidade das interações registradas.
+Nesse modelo:
 
-A aplicação permite analisar a estrutura da rede e investigar as interações existentes entre combinações de medicamentos selecionados.
+- **Vértices:** representam os medicamentos.
+- **Arestas:** representam as interações medicamentosas registradas.
+- **Pesos:** representam os níveis de gravidade das interações.
 
-## Dados
+A aplicação permite investigar combinações de medicamentos, analisar conexões e aplicar diferentes técnicas da Teoria dos Grafos.
 
-Os dados utilizados foram obtidos a partir da base DDInter (Drug-Drug Interaction Database).
+## 2. Origem e organização dos dados
 
-O conjunto analisado contém:
+Os dados foram obtidos da **DDInter (Drug-Drug Interaction Database)**, uma base científica de informações sobre interações medicamentosas.
 
-- **80 vértices:** medicamentos.
-- **220 arestas:** interações medicamentosas.
+Foi utilizado um arquivo CSV relacionado à categoria *Alimentary Tract and Metabolism* (Trato Alimentar e Metabolismo).
+
+A partir dos registros disponíveis, foi organizado um subconjunto de dados adequado ao escopo acadêmico do projeto.
+
+O conjunto utilizado contém:
+
+| Informação | Quantidade |
+|---|---:|
+| Medicamentos (vértices) | 80 |
+| Interações (arestas) | 220 |
+| Interações leves | 18 |
+| Interações moderadas | 141 |
+| Interações graves | 61 |
+
+As classificações de gravidade foram convertidas em pesos numéricos:
+
 - **Peso 1:** interação leve.
 - **Peso 2:** interação moderada.
 - **Peso 3:** interação grave.
 
 Os dados estão armazenados no arquivo `grafo.txt`.
 
-## Implementação
+A planilha `rastreabilidade_projeto_grafos_parte3.xlsx` permite relacionar os medicamentos e as interações utilizados aos registros da base original.
 
-A aplicação foi desenvolvida em Python, utilizando uma classe `Grafo` e listas de adjacências para representar as conexões entre os medicamentos.
+## 3. Modelagem utilizando Teoria dos Grafos
+
+A rede foi representada por um **grafo simples, não orientado e ponderado**, implementado por meio de listas de adjacências.
+
+A estrutura permite identificar as conexões entre medicamentos e aplicar algoritmos para estudar propriedades do grafo.
+
+Foram utilizados conceitos como:
+
+- Vértices e arestas.
+- Grafos ponderados e não orientados.
+- Listas de adjacências.
+- Graus dos vértices.
+- Subgrafos induzidos.
+- Conexidade e componentes conexas.
+- Coloração de grafos.
+
+## 4. Implementação
+
+A aplicação foi desenvolvida em **Python**, com uma classe própria denominada `Grafo`.
 
 ### Funcionalidades básicas
 
-- Leitura e gravação dos dados do grafo.
-- Inserção e remoção de vértices.
-- Inserção e remoção de arestas.
-- Exibição dos dados e das listas de adjacências.
-- Verificação da conexidade do grafo.
-- Validação de entradas e tratamento de erros.
+O programa permite:
+
+- Ler e gravar os dados do grafo.
+- Inserir e remover vértices.
+- Inserir e remover arestas.
+- Exibir o conteúdo do arquivo.
+- Mostrar as listas de adjacências.
+- Verificar a conexidade.
+- Validar entradas e tratar erros.
 
 ### Funcionalidades desenvolvidas na Parte 3
 
 **1. Análise de combinações de medicamentos**
 
-Permite selecionar medicamentos por seus identificadores e analisar o subgrafo induzido por eles, identificando as interações registradas e seus níveis de gravidade.
+Permite selecionar medicamentos pelos identificadores e construir o subgrafo induzido, identificando as interações registradas e seus níveis de gravidade.
 
 **2. Análise dos graus dos vértices**
 
-Calcula a quantidade de conexões de cada medicamento, permitindo identificar os vértices com maior número de interações registradas.
+Calcula o número de conexões de cada medicamento e identifica aqueles que possuem mais interações registradas no conjunto analisado.
 
 **3. Coloração de grafos**
 
-Aplica uma estratégia gulosa baseada na ideia do algoritmo Welsh-Powell, utilizando a ordem decrescente dos graus dos vértices.
+Utiliza uma estratégia gulosa baseada no algoritmo Welsh-Powell, considerando os vértices em ordem decrescente de grau.
 
 **4. Identificação de componentes conexas**
 
-Identifica os conjuntos de vértices conectados por caminhos, permitindo analisar a conectividade da rede.
+Determina os conjuntos de vértices conectados por caminhos, permitindo analisar a conectividade da rede.
 
-## Resultados
+## 5. Resultados obtidos
 
-A execução das funcionalidades sobre o conjunto de dados apresentou os seguintes resultados:
+A execução do programa apresentou os seguintes resultados:
 
-- 80 medicamentos e 220 interações.
-- Soma dos graus dos vértices: 440.
-- Grau médio: 5,5.
-- Uma componente conexa formada pelos 80 vértices.
-- Coloração gulosa utilizando cinco cores.
-- Identificação de interações leves, moderadas e graves entre medicamentos selecionados.
+| Indicador | Resultado |
+|---|---:|
+| Total de vértices | 80 |
+| Total de arestas | 220 |
+| Soma dos graus | 440 |
+| Grau médio | 5,5 |
+| Componentes conexas | 1 |
+| Cores utilizadas na coloração gulosa | 5 |
 
-Os resultados descrevem as relações registradas no conjunto de dados utilizado. A ausência de uma interação no grafo não comprova segurança clínica, e a coloração não constitui uma recomendação de uso conjunto de medicamentos.
+A rede analisada apresentou uma única componente conexa, formada pelos 80 medicamentos.
 
-## Testes automatizados
+A coloração gulosa utilizou cinco cores, respeitando a restrição de atribuir cores diferentes a vértices adjacentes.
 
-O arquivo `testes_robustez_parte3.py` contém 15 testes automatizados para verificar:
+Os resultados descrevem as relações registradas no conjunto de dados utilizado e não constituem recomendações clínicas.
+
+## 6. Testes de robustez
+
+O arquivo `testes_robustez_parte3.py` contém **15 testes automatizados**, desenvolvidos para verificar o funcionamento e a consistência da aplicação.
+
+Entre as verificações realizadas estão:
 
 - Leitura de arquivos válidos e inválidos.
-- Validação da estrutura do arquivo.
-- Identificação de arestas duplicadas, laços e pesos inválidos.
+- Validação da estrutura dos dados.
+- Detecção de arestas duplicadas e laços.
+- Identificação de pesos inválidos.
 - Tratamento de vértices inexistentes.
 - Gravação e releitura dos dados.
 - Análise de combinações de medicamentos.
-- Cálculo dos graus dos vértices.
+- Cálculo dos graus.
 - Validação da coloração.
 - Identificação de componentes conexas.
-- Consistência após remoção de vértices.
+- Consistência após a remoção de vértices.
 
-Na execução realizada com o conjunto de dados do projeto, os 15 testes foram aprovados.
+**Resultado: os 15 testes foram aprovados na execução realizada.**
 
-## Visualização
+## 7. Visualização dos grafos
 
-O arquivo `visualizar_grafo.py` utiliza as bibliotecas NetworkX e Matplotlib para gerar:
+O arquivo `visualizar_grafo.py` utiliza as bibliotecas **NetworkX** e **Matplotlib** para gerar representações visuais dos dados.
 
-- `figura_grafo_completo.png`: representação dos 80 medicamentos e das 220 interações, com arestas diferenciadas por gravidade.
-- `figura_subgrafo_0_7_79.png`: representação do subgrafo induzido pelos medicamentos Dexamethasone, Levofloxacin e Ciprofloxacin.
+As figuras produzidas são:
 
-## Arquivos do projeto
+- `figura_grafo_completo.png`: representa os 80 medicamentos e as 220 interações, com arestas diferenciadas por gravidade.
+- `figura_subgrafo_0_7_79.png`: representa o subgrafo induzido pelos medicamentos dexametasona, levofloxacino e ciprofloxacino.
 
-- `main_parte3.py`: programa principal atualizado da Parte 3.
-- `testes_robustez_parte3.py`: testes automatizados.
-- `visualizar_grafo.py`: geração das representações gráficas.
-- `grafo.txt`: conjunto de dados utilizado na aplicação.
-- `main.py`: código da etapa anterior do projeto.
-- `projetoTG_parte2_templateRelatorio.pdf`: relatório da Parte 2.
-- `rastreabilidade_projeto_grafos_parte3.xlsx`: planilha de rastreabilidade dos 80 medicamentos e das 220 interações.
-- `projetoTG_parte3_templateRelatório.pdf`: relatório final da Parte 3.
-  
-## Como executar
+As bibliotecas são utilizadas para visualização, enquanto a estrutura principal do grafo e suas funcionalidades são implementadas na classe própria do projeto.
+
+## 8. Objetivos de Desenvolvimento Sustentável
+
+O projeto está relacionado a dois Objetivos de Desenvolvimento Sustentável (ODS) da Organização das Nações Unidas.
+
+**ODS 3 — Saúde e Bem-Estar**
+
+Relaciona-se ao estudo e à organização de informações sobre interações medicamentosas e seus diferentes níveis de gravidade.
+
+**ODS 9 — Indústria, Inovação e Infraestrutura**
+
+Relaciona-se ao desenvolvimento de uma aplicação computacional que utiliza estruturas de dados e algoritmos para organizar e analisar informações.
+
+## 9. Arquivos do projeto
+
+| Arquivo | Descrição |
+|---|---|
+| `main_parte3.py` | Programa principal da Parte 3 |
+| `testes_robustez_parte3.py` | Testes automatizados |
+| `visualizar_grafo.py` | Geração das figuras |
+| `grafo.txt` | Dados dos 80 medicamentos e das 220 interações |
+| `main.py` | Código da etapa anterior |
+| `rastreabilidade_projeto_grafos_parte3.xlsx` | Planilha de rastreabilidade dos dados |
+| `projetoTG_parte2_templateRelatorio.pdf` | Relatório da Parte 2 |
+| `projetoTG_parte3_templateRelatório.pdf` | Relatório final da Parte 3 |
+
+## 10. Como executar
 
 **Requisito:** Python 3.
 
 Mantenha `main_parte3.py` e `grafo.txt` na mesma pasta.
 
-Para executar a aplicação principal:
+### Executar o programa principal
 
 ```bash
-python main_parte3.py
+python3 main_parte3.py
 ```
 
-No menu, selecione a opção `a` para carregar os dados antes de executar as análises.
+No menu, selecione a opção `a` para carregar os dados do arquivo antes de realizar as análises.
 
-Para executar os testes automatizados:
+### Executar os testes automatizados
 
 ```bash
-python testes_robustez_parte3.py
+python3 testes_robustez_parte3.py
 ```
 
-Para gerar as figuras, instale as bibliotecas necessárias:
+### Gerar as representações gráficas
+
+Instale as bibliotecas necessárias:
 
 ```bash
-python -m pip install networkx matplotlib
-```
-
-Depois, execute:
-
-```bash
-python visualizar_grafo.py
-```
-
-## Autora
-# Projeto de Teoria dos Grafos - Interações Medicamentosas
-
-## Descrição
-
-Projeto desenvolvido na disciplina de Teoria dos Grafos com o objetivo de representar e analisar interações entre medicamentos utilizando conceitos e algoritmos da Teoria dos Grafos.
-
-Os medicamentos são representados por vértices e as interações medicamentosas por arestas. O modelo utiliza um **grafo não orientado e ponderado**, no qual os pesos indicam os níveis de gravidade das interações registradas.
-
-A aplicação permite analisar a estrutura da rede e investigar as interações existentes entre combinações de medicamentos selecionados.
-
-## Dados
-
-Os dados utilizados foram obtidos a partir da base DDInter (Drug-Drug Interaction Database).
-
-O conjunto analisado contém:
-
-- **80 vértices:** medicamentos.
-- **220 arestas:** interações medicamentosas.
-- **Peso 1:** interação leve.
-- **Peso 2:** interação moderada.
-- **Peso 3:** interação grave.
-
-Os dados estão armazenados no arquivo `grafo.txt`.
-
-## Implementação
-
-A aplicação foi desenvolvida em Python, utilizando uma classe `Grafo` e listas de adjacências para representar as conexões entre os medicamentos.
-
-### Funcionalidades básicas
-
-- Leitura e gravação dos dados do grafo.
-- Inserção e remoção de vértices.
-- Inserção e remoção de arestas.
-- Exibição dos dados e das listas de adjacências.
-- Verificação da conexidade do grafo.
-- Validação de entradas e tratamento de erros.
-
-### Funcionalidades desenvolvidas na Parte 3
-
-**1. Análise de combinações de medicamentos**
-
-Permite selecionar medicamentos por seus identificadores e analisar o subgrafo induzido por eles, identificando as interações registradas e seus níveis de gravidade.
-
-**2. Análise dos graus dos vértices**
-
-Calcula a quantidade de conexões de cada medicamento, permitindo identificar os vértices com maior número de interações registradas.
-
-**3. Coloração de grafos**
-
-Aplica uma estratégia gulosa baseada na ideia do algoritmo Welsh-Powell, utilizando a ordem decrescente dos graus dos vértices.
-
-**4. Identificação de componentes conexas**
-
-Identifica os conjuntos de vértices conectados por caminhos, permitindo analisar a conectividade da rede.
-
-## Resultados
-
-A execução das funcionalidades sobre o conjunto de dados apresentou os seguintes resultados:
-
-- 80 medicamentos e 220 interações.
-- Soma dos graus dos vértices: 440.
-- Grau médio: 5,5.
-- Uma componente conexa formada pelos 80 vértices.
-- Coloração gulosa utilizando cinco cores.
-- Identificação de interações leves, moderadas e graves entre medicamentos selecionados.
-
-Os resultados descrevem as relações registradas no conjunto de dados utilizado. A ausência de uma interação no grafo não comprova segurança clínica, e a coloração não constitui uma recomendação de uso conjunto de medicamentos.
-
-## Testes automatizados
-
-O arquivo `testes_robustez_parte3.py` contém 15 testes automatizados para verificar:
-
-- Leitura de arquivos válidos e inválidos.
-- Validação da estrutura do arquivo.
-- Identificação de arestas duplicadas, laços e pesos inválidos.
-- Tratamento de vértices inexistentes.
-- Gravação e releitura dos dados.
-- Análise de combinações de medicamentos.
-- Cálculo dos graus dos vértices.
-- Validação da coloração.
-- Identificação de componentes conexas.
-- Consistência após remoção de vértices.
-
-Na execução realizada com o conjunto de dados do projeto, os 15 testes foram aprovados.
-
-## Visualização
-
-O arquivo `visualizar_grafo.py` utiliza as bibliotecas NetworkX e Matplotlib para gerar:
-
-- `figura_grafo_completo.png`: representação dos 80 medicamentos e das 220 interações, com arestas diferenciadas por gravidade.
-- `figura_subgrafo_0_7_79.png`: representação do subgrafo induzido pelos medicamentos Dexamethasone, Levofloxacin e Ciprofloxacin.
-
-## Arquivos do projeto
-
-- `main_parte3.py`: programa principal atualizado da Parte 3.
-- `testes_robustez_parte3.py`: testes automatizados.
-- `visualizar_grafo.py`: geração das representações gráficas.
-- `grafo.txt`: conjunto de dados utilizado na aplicação.
-- `main.py`: código da etapa anterior do projeto.
-- `projetoTG_parte2_templateRelatorio.pdf`: relatório da Parte 2.
-
-## Como executar
-
-**Requisito:** Python 3.
-
-Mantenha `main_parte3.py` e `grafo.txt` na mesma pasta.
-
-Para executar a aplicação principal:
-
-```bash
-python main_parte3.py
-```
-
-No menu, selecione a opção `a` para carregar os dados antes de executar as análises.
-
-Para executar os testes automatizados:
-
-```bash
-python testes_robustez_parte3.py
-```
-
-Para gerar as figuras, instale as bibliotecas necessárias:
-
-```bash
-python -m pip install networkx matplotlib
+python3 -m pip install networkx matplotlib
 ```
 
 Depois, execute:
 
 ```bash
-python visualizar_grafo.py
+python3 visualizar_grafo.py
 ```
 
-## Autora
+## 11. Considerações finais
 
-**Ilca Mária Pereira da Luz**  
-RA: 10444474
+O projeto demonstra a aplicação prática de conceitos da Teoria dos Grafos na organização e análise de uma rede de interações medicamentosas.
+
+A implementação permitiu explorar subgrafos induzidos, graus dos vértices, conectividade, componentes conexas e coloração, além de verificar a consistência do programa por meio de testes automatizados.
+
+O trabalho possui finalidade exclusivamente acadêmica. A ausência de uma interação no conjunto analisado não comprova segurança clínica, e os resultados não substituem avaliações ou orientações de profissionais de saúde.
+
 
 ## Observação
 
