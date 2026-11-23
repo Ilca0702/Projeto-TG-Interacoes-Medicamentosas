@@ -1,3 +1,15 @@
+
+---
+
+## 🎥 VÍDEO DE APRESENTAÇÃO DO PROJETO
+
+### ▶️ [CLIQUE AQUI PARA ASSISTIR À APRESENTAÇÃO NO YOUTUBE](https://youtu.be/HcQ0-a2EdBE)
+
+O vídeo apresenta o problema estudado, a coleta e o tratamento dos dados, a modelagem utilizando Teoria dos Grafos, a implementação em Python, a demonstração das funcionalidades, os resultados e os testes realizados.
+
+---
+
+
 # Projeto de Teoria dos Grafos - Interações Medicamentosas
 
 ## Descrição
